@@ -3,6 +3,10 @@
 
 * Add log volume to full host profiler ([#2461](https://github.com/DataDog/helm-charts/pull/2461)).
 
+## 3.190.1
+
+* Disable `registryMigrationMode` by setting default to `""`, reverting all sites to their previous site-specific registries.
+
 ## 3.190.0
 
 * Extend `registryMigrationMode: "auto"` to EU1 (`datadoghq.eu`) users with `datadog.apm.enabled: false` (the default). If you experience image pull issues, set `registryMigrationMode: ""` to revert to the previous registry.
