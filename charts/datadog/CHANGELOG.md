@@ -1,5 +1,5 @@
 # Datadog changelog
-## 3.190.1
+## 3.190.2
 
 * Add log volume to full host profiler ([#2461](https://github.com/DataDog/helm-charts/pull/2461)).
 
