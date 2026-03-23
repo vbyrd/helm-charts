@@ -1159,11 +1159,6 @@ datadog:
     # This will be changed to true in the future to enable discovery by default.
     enabledByDefault: false
 
-    # datadog.discovery.useSystemProbeLite -- (bool) Use system-probe-lite for discovery.
-    # When true, and discovery is the only system-probe feature enabled,
-    # the lightweight system-probe-lite binary is used instead of full system-probe.
-    useSystemProbeLite:  # false
-
     # datadog.discovery.networkStats.enabled -- (bool) Enable Service Discovery Network Stats
     networkStats:
       enabled: true

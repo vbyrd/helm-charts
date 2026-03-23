@@ -3,4 +3,3 @@ datadog:
   appKeyExistingSecret: datadog-secret
   discovery:
     enabledByDefault: true
-    useSystemProbeLite: true

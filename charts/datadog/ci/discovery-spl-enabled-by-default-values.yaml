@@ -3,4 +3,3 @@ datadog:
   appKey: "xxxxx"
   discovery:
     enabledByDefault: true
-    useSystemProbeLite: true

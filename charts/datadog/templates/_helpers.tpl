@@ -615,11 +615,11 @@ false
 
 {{/*
 Return true if system-probe-lite should be used instead of full system-probe.
-This is the case when discovery and useSystemProbeLite are enabled, and no other
-system-probe feature requires the full binary.
+This is the case when discovery is enabled and no other system-probe feature
+requires the full binary.
 */}}
 {{- define "should-use-system-probe-lite" -}}
-{{- if and (eq (include "discovery-enabled" .) "true") .Values.datadog.discovery.useSystemProbeLite (eq (include "system-probe-feature-except-discovery" .) "false") -}}
+{{- if and (eq (include "discovery-enabled" .) "true") (eq (include "system-probe-feature-except-discovery" .) "false") -}}
 true
 {{- else -}}
 false
