@@ -1,5 +1,9 @@
 # Datadog changelog
 
+## 3.196.0
+
+* Add system-probe-lite support for discovery in Helm chart ([#2479](https://github.com/DataDog/helm-charts/pull/2479)).
+
 ## 3.195.0
 
 * Extend `registryMigrationMode: "auto"` to US1 (`datadoghq.com`) users with APM disabled (the default). If you experience image pull issues, set `registryMigrationMode: ""` to revert to the previous registry.
@@ -42,7 +46,6 @@
 
 ## 3.188.0
 
-* Add system-probe-lite support for discovery in Helm chart ([#2479](https://github.com/DataDog/helm-charts/pull/2479)).
 * Enable remote configuration by default on cluster check runners ([#2473](https://github.com/DataDog/helm-charts/pull/2473)).
 
 ## 3.187.0
