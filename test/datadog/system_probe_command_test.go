@@ -61,6 +61,17 @@ func Test_systemProbeCommand(t *testing.T) {
 			expectSystemProbe: false,
 		},
 		{
+			name: "discovery explicitly disabled with other SP feature -- regular system-probe",
+			overrides: map[string]string{
+				"datadog.apiKeyExistingSecret":      "datadog-secret",
+				"datadog.appKeyExistingSecret":      "datadog-secret",
+				"datadog.discovery.enabled":         "false",
+				"datadog.networkMonitoring.enabled":  "true",
+			},
+			expectSystemProbe:   true,
+			expectCommandEquals: []string{"system-probe", "--config=/etc/datadog-agent/system-probe.yaml"},
+		},
+		{
 			name: "no discovery -- no system-probe container",
 			overrides: map[string]string{
 				"datadog.apiKeyExistingSecret": "datadog-secret",
