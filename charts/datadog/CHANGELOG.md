@@ -1,8 +1,49 @@
 # Datadog changelog
 
+## 3.195.0
+
+* Extend `registryMigrationMode: "auto"` to US1 (`datadoghq.com`) users with APM disabled (the default). If you experience image pull issues, set `registryMigrationMode: ""` to revert to the previous registry.
+
+## 3.194.0
+
+* [CONTP-1361] add admission controller probe configuration ([#2449](https://github.com/DataDog/helm-charts/pull/2449)).
+
+## 3.193.0
+
+* Add `datadog.appsec.injector.mode`, `datadog.appsec.injector.sidecar.*` values to configure the AppSec sidecar processor (image, ports, resource requests/limits, body parsing limit). Add `istio-gateway` as a valid `datadog.appsec.injector.proxies` value. Add `networking.istio.io/gateways` RBAC rule to the cluster-agent ClusterRole for Istio Gateway support.
+
+## 3.192.1
+
+* Add IPC env vars to core agent when full host profiler is enabled.
+
+## 3.192.0
+
+* Add Private Action Runner support in Node Agent as a sidecar container with configuration options for self-enrollment, manual credentials, and existing secrets.
+
+## 3.191.1
+
+* fix(gke_autopilot): Use pointerdir volume for GKE autopilot clusters ([#2495](https://github.com/DataDog/helm-charts/pull/2495)).
+
+## 3.190.1
+
+* Add log volume to full host profiler ([#2461](https://github.com/DataDog/helm-charts/pull/2461)).
+
+## 3.191.0
+
+* Extend `registryMigrationMode: "auto"` to all EU1 (`datadoghq.eu`) users regardless of APM configuration. If you experience image pull issues, set `registryMigrationMode: ""` to revert to the previous registry.
+
+## 3.190.0
+
+* Extend `registryMigrationMode: "auto"` to EU1 (`datadoghq.eu`) users with `datadog.apm.enabled: false` (the default). If you experience image pull issues, set `registryMigrationMode: ""` to revert to the previous registry.
+
+## 3.189.0
+
+* Add `datadog.kubernetesEvents.maxEventsPerRun` and `datadog.kubernetesEvents.kubernetesEventResyncPeriodS` for kubernetes event collection.
+
 ## 3.188.0
 
 * Add system-probe-lite support for discovery in Helm chart ([#2479](https://github.com/DataDog/helm-charts/pull/2479)).
+* Enable remote configuration by default on cluster check runners ([#2473](https://github.com/DataDog/helm-charts/pull/2473)).
 
 ## 3.187.0
 
