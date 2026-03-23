@@ -1,5 +1,9 @@
 # Datadog changelog
 
+## 3.195.0
+
+* Allow using the fips variant of the otel collector image in the daemonset ([#2366](https://github.com/DataDog/helm-charts/pull/2366)).
+
 ## 3.194.0
 
 * [CONTP-1361] add admission controller probe configuration ([#2449](https://github.com/DataDog/helm-charts/pull/2449)).
