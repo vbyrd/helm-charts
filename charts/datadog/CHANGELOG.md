@@ -1,5 +1,9 @@
 # Datadog changelog
 
+## 3.196.0
+
+* Extend `registryMigrationMode: "auto"` to all US1 (`datadoghq.com`) users regardless of APM configuration. If you experience image pull issues, set `registryMigrationMode: ""` to revert to the previous registry.
+
 ## 3.195.1
 
 * Gate `KILL` capability on `system-probe` when `securityAgent.runtime.enforcement.enabled=true` and `securityAgent.runtime.enabled=true`.
